@@ -1,0 +1,52 @@
+clear清理
+exit 退出
+
+
+--在本机上创建用户吧？
+git config --global user.name "luzhijie";
+git config --global user.email "364460369@qq.com"
+
+
+git add   filename
+git commit -m "add distributed"
+
+
+git status	•要随时掌握工作区的状态
+git diff filename 查看被修改文件的修改内容 
+
+查看操作文件版本记录(中是简单信息)
+git log (--pretty=oneline)
+
+版本跳转退回上一版本
+git reset --hard HEAD^
+git reset --hard commitid
+
+将工作区的文件丢弃---相当于从版本库中提取了一个新的替换到了工作区可以解决误删问题
+git checkout -- readme.txt
+将暂存区的文件丢回工作区
+git reset HEAD readme.txt
+
+删除文件
+git rm test.txt
+再提交git commit
+
+
+
+创建秘钥
+ssh-keygen -t rsa -C "364460369@qq.com"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
