@@ -36,7 +36,10 @@ git rm test.txt
 ssh-keygen -t rsa -C "364460369@qq.com"
 
 
-
+从命令行推送已经创建的仓库
+git remote add origin allview@172.16.248.4:luzhijie/mygit.git
+提交同步
+git push -u origin master
 
 
 
