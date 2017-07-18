@@ -38,8 +38,27 @@ ssh-keygen -t rsa -C "364460369@qq.com"
 
 从命令行推送已经创建的仓库
 git remote add origin allview@172.16.248.4:luzhijie/mygit.git
-提交同步
+第一次提交同步
 git push -u origin master
+之后提交
+git push origin master
+
+克隆远程仓库
+git clone allview@172.16.248.4:luzhijie/mygit.git
+
+
+创建分支dev
+git checkout -b dev
+使用-b表示创建并切换，相当于
+git branch dev
+git checkout dev
+查看当前分支和所有分支
+git branch 
+
+
+
+
+
 
 
 
