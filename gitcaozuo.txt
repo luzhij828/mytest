@@ -21,9 +21,9 @@ git log (--pretty=oneline)
 git reset --hard HEAD^
 git reset --hard commitid
 
-将工作区的文件丢弃---相当于从版本库中提取了一个新的替换到了工作区可以解决误删问题
+将工作区(就是你的实时编辑)的文件丢弃---相当于从版本库中提取了一个新的替换到了工作区可以解决误删问题
 git checkout -- readme.txt
-将暂存区的文件丢回工作区
+将暂存区(就是你add的)的文件丢回工作区
 git reset HEAD readme.txt
 
 删除文件
@@ -40,7 +40,7 @@ ssh-keygen -t rsa -C "364460369@qq.com"
 git remote add origin allview@172.16.248.4:luzhijie/mygit.git
 第一次提交同步
 git push -u origin master
-之后提交
+之后提交origin是远程库的默认名，master是本地版本库主分支
 git push origin master
 
 克隆远程仓库
@@ -50,10 +50,38 @@ git clone allview@172.16.248.4:luzhijie/mygit.git
 创建分支dev
 git checkout -b dev
 使用-b表示创建并切换，相当于
-git branch dev
-git checkout dev
+git branch dev  --创建
+git checkout dev    --切换
 查看当前分支和所有分支
 git branch 
+
+切回master
+git checkout master
+将dev合并进入当前所在分支
+git merge dev
+删除dev分支
+git branch -d dev
+查看分支合并图
+git log --graph      带参数
+git log --graph --pretty=oneline --abbrev-commit		不带参数
+当合并是发生文件内容冲突时，会提示让人手工进行修改，并且冲突的地方会进行标注·
+之后再进行add commit 提交
+
+在合并分支时保留被合并分支的版本信息使用--no-ff参数，相当于一个再次提交
+git merge --no-ff -m "merge with no-ff" dev
+
+
+将当前工作区暂时封存储，git status 将没有之前的改动状态（估计就是为了这点吧）想可以优先执行在其他分支上进行其他操作
+git stash
+查看当前分支所有的暂时封存
+git stash list
+恢复指定的封存
+git stash apply stash@{0}	提取
+git stash drop stash@{0}	删除
+git stash pop stash@{0}		提取并删除
+
+对于一个还没有合并的分支，想要删除必须强制删除
+git branch -D fengzhiNAME
 
 
 
