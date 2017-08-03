@@ -38,6 +38,10 @@ ssh-keygen -t rsa -C "364460369@qq.com"
 
 从命令行推送已经创建的仓库
 git remote add origin allview@172.16.248.4:luzhijie/mygit.git
+git remote add origin https://github.com/luzhij828/mytest.git
+
+删除远程仓库
+git remote rm origin
 第一次提交同步
 git push -u origin master
 之后提交origin是远程库的默认名，master是本地版本库主分支
