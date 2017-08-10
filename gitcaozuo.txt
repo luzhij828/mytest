@@ -1,11 +1,10 @@
 clear清理
 exit 退出
 
-<<<<<<< HEAD
-=======
+
 创建版本库
 git init
->>>>>>> 添加远程库的上传
+
 
 --在本机上创建用户吧？
 git config --global user.name "luzhijie";
@@ -16,11 +15,9 @@ git add   filename
 git commit -m "add distributed"
 
 
-<<<<<<< HEAD
-git status	•要随时掌握工作区的状态
-=======
+
 git status	要随时掌握工作区的状态
->>>>>>> 添加远程库的上传
+
 git diff filename 查看被修改文件的修改内容 
 
 查看操作文件版本记录(中是简单信息)
@@ -105,8 +102,7 @@ git branch -D fengzhiNAME
 
 
 
-<<<<<<< HEAD
-=======
+
 多人协作模式，多人使用同一个远程库
 git remote -v	查看远程库信息
 在本地创建的其他分支如果不推送到远程库，其他人克隆下来的版本库是看不见这些分支的
@@ -117,7 +113,7 @@ git checkout -b dev origin/dev		如果要在dev分支上开发，就必须创建
 git branch --set-upstream dev origin/dev
 之后再进行git pull ，会标记出来被修改的文件，去进行修改在add、 commit、提交远程库git push origin dev
 
->>>>>>> 添加远程库的上传
+
 
 
 
